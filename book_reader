@@ -1,0 +1,17 @@
+book_reader<-function(){
+ 
+ ### using readLines using this we only get required lines
+   my_book <- readLines("http://www.gutenberg.org/files/51374/51374-0.txt")
+  
+  ### removing the end disclaimer
+ ###disclaimer is of type
+  # End of the Project Gutenberg EBook of Inside Earth, by Poul Anderson
+
+  
+  starti <- grep("End of the Project Gutenberg EBook of Inside Earth",my_book)
+ 
+    my_book<-my_book[-(starti:length(my_book))]
+ 
+my_book
+
+}
