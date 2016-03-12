@@ -1,0 +1,16 @@
+
+##verbs can be easily found by stringer library
+
+
+library(stringr)
+
+all_verb<-function(g_txt){
+  
+  
+  ve_rb<-word(strsplit(g_txt$POStagged,"/VB")[[1]],-1)
+  
+  ###ve_rb contains the verbs
+  ve_rb
+  
+  
+}
